@@ -1,5 +1,7 @@
 // Portfolio data for Chaw Thiri San
 
+import { ImInstagram } from "react-icons/im";
+
 export const personalInfo = {
   name: "Chaw Thiri San",
   title: "Student & AI Researcher",
@@ -12,16 +14,14 @@ export const personalInfo = {
   // Social links
   social: {
     github: "https://github.com/chaw-thiri",
-    linkedin: "https://linkedin.com/in/chaw-thiri-san",
-    twitter: "",
-    website: "https://chaw-thiri.github.io/portfolio/",
+    linkedin: "https://linkedin.com/in/chaw-thiri-san", 
     scholar: "https://scholar.google.com/citations?user=ngi2m7AAAAAJ&hl=en",
     orcid: "https://orcid.org/0009-0004-4680-8483",
     medium: "https://medium.com/@chawthirisan"
   },
 
   // Profile image (place in public folder)
-  image: "/Users/chaw/Documents/portfolio_website/portfolio/public/logos/profile.jpg",
+  image: "public/profile.heic",
 };
 
 export const skills = {
@@ -245,7 +245,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
-    image: "/portfolio/certifications/most_creative_award.jpg"
+    image: "/portfolio/certifications/seoul_global_startup_center.jpg"
   },
   {
     id: 3,
