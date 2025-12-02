@@ -2,25 +2,25 @@
 
 export const personalInfo = {
   name: "Chaw Thiri San",
-  title: "Integrated Systems Engineering Student & AI Researcher",
-  tagline: "Passionate about AI, Computer Vision, and Data Science",
+  title: "Student & AI Researcher",
+  tagline: "Passionate about NLP, Computer Vision, and Data Science",
   email: "chawthiri177@gmail.com",
   phone: "",
   location: "Incheon, Korea",
-  bio: "I am a Valedictorian and Honor Student at INHA University, pursuing a BS in Integrated Systems Engineering with a GPA of 4.38/4.5. As a recipient of the Global Scholarship for maintaining academic excellence, I am passionate about leveraging cutting-edge technologies to solve real-world problems. My research interests span across AI, computer vision, quantum cryptography, and agricultural technologies.",
+  bio: "I am a Valedictorian and Honor Student at INHA University, pursuing a BS in Integrated Systems Engineering with a GPA of 4.38/4.5. I am passionate about leveraging cutting-edge technologies to solve real-world problems. My research interests span across NLP, computer vision, quantum cryptography, and data science.",
 
   // Social links
   social: {
     github: "https://github.com/chaw-thiri",
     linkedin: "https://linkedin.com/in/chaw-thiri-san",
     twitter: "",
-    website: "",
+    website: "https://chaw-thiri.github.io/portfolio/",
     scholar: "https://scholar.google.com/citations?user=ngi2m7AAAAAJ&hl=en",
-    orcid: "",
+    orcid: "https://orcid.org/0009-0004-4680-8483",
   },
 
   // Profile image (place in public folder)
-  image: "/profile.JPG",
+  image: "public/profile.JPG",
 };
 
 export const skills = {
@@ -31,11 +31,7 @@ export const skills = {
     },
     {
       title: "Machine Learning & AI",
-      skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Keras"],
-    },
-    {
-      title: "Data Science & Visualization",
-      skills: ["Matplotlib", "Pandas", "NumPy"],
+      skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Keras", "Matplotlib", "Pandas", "NumPy"],
     },
     {
       title: "NLP & Deep Learning",
@@ -107,7 +103,7 @@ export const publications = [
     abstract: "Conducted an in-depth review on how 5IR technologies (AI, robotics, IoT, 5G, edge computing) are transforming weeding in agriculture. Highlighted sustainable, data-driven practices that reduce herbicide use and enhance crop yield. Proposed scalable solutions for global adoption, especially in low-resource settings.",
     link: "https://www.mdpi.com/2079-9292/14/13/2517",
     pdf: "https://www.mdpi.com/2079-9292/14/13/2517/pdf",
-    citations: 3,
+    citations: 4,
     year: 2025,
     tags: ["Agriculture", "AI", "Robotics", "IoT", "5G", "Sustainability"],
   },
@@ -152,7 +148,6 @@ export const experience = [
     highlights: [
       "GPA: 4.38/4.5 (Valedictorian and Honor Student)",
       "Full Tuition Global Scholarship (2022-2025)",
-      "Active in research and hackathons",
     ],
     logo: "/logos/inha.png",
   },
@@ -160,7 +155,7 @@ export const experience = [
     id: 2,
     type: "work",
     title: "Python Programming Tutor",
-    organization: "Private Tutoring",
+    organization: "Inha University",
     location: "Incheon, South Korea",
     startDate: "Sep 2023",
     endDate: "Dec 2023",
@@ -181,7 +176,7 @@ export const certifications = [
     issuer: "DeepLearning.AI",
     date: "2024",
     credentialId: "",
-    link: "",
+    link: "https://www.coursera.org/account/accomplishments/specialization/5KSQ5T5QRK2B",
     image: "/certifications/ml-specialization.jpg",
     skills: ["Machine Learning", "Deep Learning", "Neural Networks"],
   },
@@ -190,8 +185,8 @@ export const certifications = [
     title: "DevNet Associate",
     issuer: "Cisco",
     date: "2024",
-    credentialId: "",
-    link: "",
+    credentialId: "903f50f3-38c3-4598-9f3a-fa2ed6d04d5c",
+    link: "https://www.credly.com/badges/903f50f3-38c3-4598-9f3a-fa2ed6d04d5c/linked_in_profile",
     image: "/certifications/devnet.jpg",
     skills: ["Network Automation", "APIs", "Python"],
   },
@@ -201,7 +196,7 @@ export const certifications = [
     issuer: "Cisco",
     date: "2024",
     credentialId: "",
-    link: "",
+    link: "https://www.credly.com/badges/c8cd0341-834a-4714-8d93-24b6309311af/linked_in_profile",
     image: "/certifications/ccna.jpg",
     skills: ["Networking", "Routing", "Switching"],
   },
@@ -211,7 +206,7 @@ export const certifications = [
     issuer: "Cisco",
     date: "2024",
     credentialId: "",
-    link: "",
+    link: "https://www.credly.com/badges/5acc96de-6b98-44ad-b285-2cec03797ac6/linked_in_profile",
     image: "/certifications/cyberops.jpg",
     skills: ["Cybersecurity", "Network Security", "Threat Detection"],
   },
@@ -230,8 +225,8 @@ export const certifications = [
     title: "OpenCV Bootcamp",
     issuer: "OpenCV University",
     date: "2024",
-    credentialId: "",
-    link: "",
+    credentialId: "a311db67d6ee4a9e8a571ca3af562a07",
+    link: "https://courses.opencv.org/certificates/a311db67d6ee4a9e8a571ca3af562a07",
     image: "/certifications/opencv.jpg",
     skills: ["OpenCV", "Computer Vision", "Image Processing"],
   },
@@ -259,26 +254,13 @@ export const awards = [
     date: "December 2025",
     description: "Second place in the capstone design competition.",
   },
+  
   {
     id: 4,
-    title: "Global Scholarship 1 (100% tuition waiver)",
+    title: "Global Scholarship 1 & 2 (100% tuition waiver)",
     issuer: "INHA University",
-    date: "2022 Fall Semester",
-    description: "Full tuition scholarship for academic excellence.",
-  },
-  {
-    id: 5,
-    title: "Global Scholarship 2 (100% tuition waiver)",
-    issuer: "INHA University",
-    date: "2023-2025",
+    date: "2022-2025",
     description: "Continuing full tuition scholarship for maintaining GPA above 4.3.",
-  },
-  {
-    id: 6,
-    title: "Inha Program Scholarship ($300)",
-    issuer: "INHA University",
-    date: "2023 Fall Semester",
-    description: "Merit-based scholarship award.",
   },
 ];
 
