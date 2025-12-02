@@ -1,5 +1,7 @@
 // Portfolio data for Chaw Thiri San
 
+import { image } from "framer-motion/client";
+
 export const personalInfo = {
   name: "Chaw Thiri San",
   title: "Student & AI Researcher",
@@ -63,7 +65,6 @@ export const projects = [
     id: 2,
     title: "Call Volume Detection",
     description: "Winner of 1st prize at hackathon. Time-series prediction project on NYC 311 call center data implementing multiple tree-based ML models (XGBRegressor, LightGBM, CatBoost, Random Forest). Includes statistical anomaly detection and Power BI dashboard visualization.",
-    image: "/projects/call-volume.jpg",
     technologies: ["Python", "XGBoost", "LightGBM", "CatBoost", "Power BI", "Statistical Analysis"],
     github: "https://github.com/chaw-thiri/City-311-Insights-Challenge",
     demo: "",
@@ -73,7 +74,6 @@ export const projects = [
     id: 3,
     title: "Earthquake Prediction Model",
     description: "CNN-based model to predict future earthquakes using historical seismic data. Utilizes Keras regressor with Adam optimizer and Grid Search to estimate earthquake magnitude and crack depth with high accuracy.",
-    image: "/projects/earthquake.jpg",
     technologies: ["TensorFlow", "Keras", "CNNs", "Python", "Matplotlib", "Grid Search"],
     github: "https://github.com/chaw-thiri/earthquake_detection_-_crack_depth_estimation",
     demo: "",
@@ -83,7 +83,6 @@ export const projects = [
     id: 4,
     title: "Clickbait Detector",
     description: "AI-powered tool for classifying news headlines using DistilBERT with high accuracy. Features real-time predictions through Streamlit app, integrates web scraping (Selenium, BeautifulSoup), News API, and interactive EDA visualizations.",
-    image: "/projects/clickbait.jpg",
     technologies: ["DistilBERT", "PyTorch", "NLP", "Streamlit", "Selenium", "BeautifulSoup", "News API", "Plotly"],
     github: "https://github.com/chaw-thiri/clickbait_detection",
     demo: "",
@@ -239,6 +238,7 @@ export const awards = [
     issuer: "Humblebee AI",
     date: "2025",
     description: "First place winner in the AI hackathon competition.",
+    image: "public/certifications/humblebee_ai_hackathon.jpg"
   },
   {
     id: 2,
@@ -246,6 +246,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
+    image: "public/certifications/inha_capstone.jpg"
   },
   {
     id: 3,
@@ -253,6 +254,7 @@ export const awards = [
     issuer: "INHA University",
     date: "December 2025",
     description: "Second place in the capstone design competition.",
+    image: "public/certifications/inha_capstone.jpg"
   },
   
   {
