@@ -21,7 +21,7 @@ export const personalInfo = {
   },
 
   // Profile image (place in public folder)
-  image: "public/profile.heic",
+  image: "public/profile.jpg",
 };
 
 export const skills = {
@@ -210,16 +210,6 @@ export const certifications = [
   },
   {
     id: 5,
-    title: "TensorFlow Keras Bootcamp",
-    issuer: "OpenCV University",
-    date: "2024",
-    credentialId: "",
-    link: "",
-    image: "/certifications/tensorflow.jpg",
-    skills: ["TensorFlow", "Keras", "Deep Learning"],
-  },
-  {
-    id: 6,
     title: "OpenCV Bootcamp",
     issuer: "OpenCV University",
     date: "2024",
