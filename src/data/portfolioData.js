@@ -17,6 +17,7 @@ export const personalInfo = {
     website: "https://chaw-thiri.github.io/portfolio/",
     scholar: "https://scholar.google.com/citations?user=ngi2m7AAAAAJ&hl=en",
     orcid: "https://orcid.org/0009-0004-4680-8483",
+    medium: "https://medium.com/@chawthirisan"
   },
 
   // Profile image (place in public folder)
