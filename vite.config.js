@@ -8,5 +8,5 @@ export default defineConfig({
   // For example, if your repo is https://github.com/username/portfolio
   // then base should be '/portfolio/'
   // If deploying to custom domain or username.github.io, use '/'
-  base: '/',
+  base: '/portfolio/',
 })
