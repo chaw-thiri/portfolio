@@ -20,7 +20,7 @@ export const personalInfo = {
   },
 
   // Profile image (place in public folder)
-  image: "/portfolio/profile.jpg",
+  image: "/Users/chaw/Documents/portfolio_website/portfolio/public/logos/profile.jpg",
 };
 
 export const skills = {
@@ -244,7 +244,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
-    image: "/portfolio/certifications/inha_capstone.jpg"
+    image: "/portfolio/certifications/most_creative_award.jpg"
   },
   {
     id: 3,
