@@ -281,3 +281,145 @@ export const languages = [
     proficiency: "Pre-intermediate",
   },
 ];
+
+// Chatbot knowledge base
+export const chatbotKnowledge = {
+  researchInterests: [
+    "Natural Language Processing (NLP) - Sentiment analysis, text classification, transformer models",
+    "Computer Vision - Object detection, person re-identification, YOLO models, real-time tracking",
+    "Quantum Cryptography - Post-quantum algorithms, biometric security, QKD protocols",
+    "Machine Learning - Deep learning, CNNs, time-series prediction, ensemble methods",
+    "Agricultural AI - Smart weeding, precision agriculture, 5IR technologies, IoT integration",
+    "Biometric Security - Quantum-resilient authentication, secure systems",
+    "Large Language Models - Code comprehension, LLM limitations, cognitive grounding",
+    "Human-AI Interaction - Eye-tracking integration, interpretable AI, trust in AI systems",
+    "Data Science - Statistical analysis, data visualization, predictive modeling",
+    "Robotics & Edge Computing - Raspberry Pi deployment, TurtleBot, model optimization"
+  ],
+  availability: "Currently pursuing Bachelor's degree in Integrated Systems Engineering at INHA University (expected graduation 2026). GPA: 4.38/4.5. Full tuition Global Scholarship recipient. Open to research collaborations, internship opportunities, and academic partnerships in AI/ML, computer vision, and quantum cryptography.",
+  achievements: [
+    "Published first-author paper in MDPI Electronics journal (4 citations)",
+    "Two papers under review at Elsevier journals (Journal of Industrial Information Integration, Advanced Engineering Informatics)",
+    "Winner of Humblebee AI's 2025 Hackathon (1st place)",
+    "Most Creative Award at Seoul Global Startup Center Hackathon",
+    "2nd Award at INHA University SGCS Capstone Competition",
+    "Valedictorian and Honor Student at INHA University",
+    "Multiple professional certifications including Cisco DevNet Associate, CCNA, CyberOps Associate",
+    "Machine Learning Specialization from DeepLearning.AI",
+    "OpenCV and TensorFlow Keras Bootcamp certifications"
+  ],
+  technicalExpertise: {
+    programmingLanguages: "Python (primary), SQL, C++, React, Git",
+    mlFrameworks: "TensorFlow, PyTorch, Keras, Scikit-learn, OpenCV",
+    nlpTools: "DistilBERT, Transformers, BERT-based models",
+    dataScience: "Pandas, NumPy, Matplotlib, Plotly, statistical analysis",
+    mlModels: "XGBoost, LightGBM, CatBoost, Random Forest, CNNs, YOLO11n, BOT-Sort",
+    tools: "Docker, Raspberry Pi, TurtleBot, Streamlit, Power BI",
+    webTech: "Selenium, BeautifulSoup, RESTful APIs, News API"
+  },
+  notableProjects: {
+    personTracking: "Finetuned BOT-Sort with YOLO11n for unique person counting on Raspberry Pi - real-time deployment optimized for edge computing",
+    callVolume: "1st place hackathon winner - Time-series prediction with ensemble ML models (XGBoost, LightGBM, CatBoost) on NYC 311 data",
+    clickbaitDetector: "NLP tool using DistilBERT for news headline classification with Streamlit interface and real-time API integration",
+    earthquakePrediction: "CNN-based model for seismic prediction with magnitude and crack depth estimation using Keras and Grid Search"
+  },
+  researchFocus: "My research bridges theoretical foundations with practical applications - from quantum-secure biometric systems to agricultural AI solutions. I'm particularly interested in making AI systems more interpretable, trustworthy, and grounded in human cognition.",
+  collaborationInterests: "Looking for opportunities in: AI research labs, computer vision projects, quantum computing applications, agricultural technology, NLP systems, and interdisciplinary AI projects combining multiple domains.",
+
+  // Domain-specific expertise mapping for intelligent responses
+  expertiseDomains: {
+    frontend: {
+      skills: ["React", "JavaScript/ES6+", "HTML5/CSS3", "Responsive Design", "styled-components", "Framer Motion animations"],
+      projects: ["Portfolio Website - Built with React, Vite, styled-components with dark/light mode toggle and smooth animations"],
+      experience: "Self-taught frontend development through building personal projects and modern web applications",
+      technologies: "React, Vite, styled-components, framer-motion, responsive design principles",
+      evidence: "This portfolio website itself demonstrates frontend skills - built entirely with React including custom animations, theme system, and responsive design"
+    },
+    backend: {
+      skills: ["Python", "RESTful APIs", "SQL databases", "Docker containerization", "API integration"],
+      projects: [
+        "Clickbait Detector - Backend API integration with News API, web scraping with Selenium and BeautifulSoup",
+        "Call Volume Detection - Data pipeline with NYC 311 API integration"
+      ],
+      certifications: ["Cisco DevNet Associate - Network Automation and APIs"],
+      technologies: "Python Flask/FastAPI, SQL, Docker, REST APIs, web scraping"
+    },
+    machineLearning: {
+      skills: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Deep Learning", "Model Training & Fine-tuning"],
+      projects: [
+        "Person Tracking - Fine-tuned YOLO11n and BOT-Sort models",
+        "Call Volume Detection - Ensemble ML with XGBoost, LightGBM, CatBoost, Random Forest",
+        "Earthquake Prediction - CNN-based regression model with Grid Search optimization",
+        "Clickbait Detector - Fine-tuned DistilBERT transformer model"
+      ],
+      certifications: ["Machine Learning Specialization (DeepLearning.AI)", "TensorFlow Keras Bootcamp (OpenCV University)"],
+      publications: "Applied ML techniques in 3 research papers (1 published, 2 under review)",
+      experience: "2+ years hands-on ML experience with computer vision, NLP, and time-series prediction"
+    },
+    computerVision: {
+      skills: ["OpenCV", "YOLO models", "Object Detection", "Person Re-identification", "Image Processing", "Real-time tracking"],
+      projects: [
+        "Person Tracking - YOLO11n + BOT-Sort for unique person counting with re-identification",
+        "Earthquake Prediction - CNN-based visual pattern recognition"
+      ],
+      certifications: ["OpenCV Bootcamp (OpenCV University)"],
+      technologies: "OpenCV, YOLO11n, BOT-Sort, TensorFlow, PyTorch, Ultralytics",
+      deployment: "Optimized models for Raspberry Pi edge deployment"
+    },
+    nlp: {
+      skills: ["Transformers", "DistilBERT", "BERT", "Text Classification", "Sentiment Analysis", "Natural Language Processing"],
+      projects: ["Clickbait Detector - DistilBERT for news headline classification with 94%+ accuracy"],
+      publications: ["Large Language Models and Eye-Tracking paper (under review at Advanced Engineering Informatics)"],
+      technologies: "DistilBERT, PyTorch, Transformers library, tokenization, fine-tuning",
+      applications: "Text classification, sentiment analysis, headline authenticity detection"
+    },
+    dataScience: {
+      skills: ["Pandas", "NumPy", "Matplotlib", "Plotly", "Statistical Analysis", "Data Visualization", "Feature Engineering"],
+      projects: [
+        "Call Volume Detection - Time-series analysis, statistical anomaly detection, Power BI dashboards",
+        "Clickbait Detector - Exploratory Data Analysis with interactive Plotly visualizations"
+      ],
+      technologies: "Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly), SQL, Power BI, statistical modeling",
+      experience: "Extensive EDA and data preprocessing across multiple ML projects"
+    },
+    webScraping: {
+      skills: ["Selenium", "BeautifulSoup", "Web Automation", "Data Extraction", "API Integration"],
+      projects: ["Clickbait Detector - Automated web scraping with Selenium and BeautifulSoup, News API integration"],
+      technologies: "Selenium WebDriver, BeautifulSoup4, Requests, News API, RESTful APIs"
+    },
+    deployment: {
+      skills: ["Docker", "Edge Computing", "Model Optimization", "Raspberry Pi", "Real-time Systems"],
+      projects: ["Person Tracking - Optimized YOLO model for Raspberry Pi deployment, Docker containerization"],
+      technologies: "Docker, Raspberry Pi 4, TurtleBot integration, model quantization, edge optimization",
+      certifications: ["Cisco DevNet Associate - focuses on deployment automation"]
+    },
+    networking: {
+      skills: ["Network Fundamentals", "APIs", "Network Security", "Automation"],
+      certifications: [
+        "Cisco DevNet Associate - Network automation, APIs, Python for networking",
+        "CCNA: Introduction to Networks - Routing, switching, network protocols",
+        "CyberOps Associate - Cybersecurity operations, network security, threat detection"
+      ],
+      technologies: "RESTful APIs, network protocols, security best practices"
+    },
+    research: {
+      publications: [
+        "Smart Precision Weeding in Agriculture Using 5IR Technologies (MDPI Electronics, 2025) - 4 citations",
+        "Quantum Cryptography in Biometric Security (Elsevier JIII - Under Review)",
+        "Large Language Models and Eye-Tracking (Elsevier AEI - Under Review)"
+      ],
+      domains: ["Agricultural AI", "Quantum Cryptography", "Biometric Security", "LLMs", "Human-AI Interaction"],
+      approach: "Bridges theoretical foundations with practical applications, focuses on interpretable and trustworthy AI"
+    },
+    quantumComputing: {
+      research: "Quantum Cryptography in Biometric Security paper - explores post-quantum cryptography, QKD protocols, quantum-resilient authentication",
+      knowledge: "Post-quantum algorithms, quantum key distribution, quantum entanglement for security, biometric system hardening",
+      publications: "Paper under review at Journal of Industrial Information Integration (Elsevier)"
+    },
+    robotics: {
+      skills: ["TurtleBot", "Raspberry Pi", "Embedded Systems", "Real-time Processing"],
+      projects: ["Person Tracking - Deployed on Raspberry Pi with TurtleBot integration for mobile robot applications"],
+      technologies: "TurtleBot platform, Raspberry Pi 4, embedded Linux, real-time computer vision"
+    }
+  }
+};

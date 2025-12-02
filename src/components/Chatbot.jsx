@@ -261,6 +261,28 @@ const Chatbot = () => {
       `- ${e.title} at ${e.organization} (${e.startDate} - ${e.endDate}): ${e.description}`
     ).join('\n');
 
+    const achievementsList = chatbotKnowledge.achievements.join('\n- ');
+
+    // Build domain expertise details
+    const domainExpertiseText = Object.entries(chatbotKnowledge.expertiseDomains)
+      .map(([domain, details]) => {
+        let text = `\n${domain.toUpperCase()}:`;
+        if (details.skills) text += `\n  Skills: ${Array.isArray(details.skills) ? details.skills.join(', ') : details.skills}`;
+        if (details.projects) text += `\n  Projects: ${Array.isArray(details.projects) ? details.projects.join('; ') : details.projects}`;
+        if (details.certifications) text += `\n  Certifications: ${Array.isArray(details.certifications) ? details.certifications.join('; ') : details.certifications}`;
+        if (details.publications) text += `\n  Publications: ${Array.isArray(details.publications) ? details.publications.join('; ') : details.publications}`;
+        if (details.experience) text += `\n  Experience: ${details.experience}`;
+        if (details.technologies) text += `\n  Technologies: ${details.technologies}`;
+        if (details.evidence) text += `\n  Evidence: ${details.evidence}`;
+        if (details.deployment) text += `\n  Deployment: ${details.deployment}`;
+        if (details.applications) text += `\n  Applications: ${details.applications}`;
+        if (details.research) text += `\n  Research: ${details.research}`;
+        if (details.knowledge) text += `\n  Knowledge: ${details.knowledge}`;
+        if (details.domains) text += `\n  Domains: ${details.domains.join(', ')}`;
+        if (details.approach) text += `\n  Approach: ${details.approach}`;
+        return text;
+      }).join('\n');
+
     return `You are an AI assistant helping visitors learn about ${personalInfo.name}'s portfolio.
 
 PERSONAL INFO:
@@ -269,12 +291,31 @@ Title: ${personalInfo.title}
 Bio: ${personalInfo.bio}
 Email: ${personalInfo.email}
 Location: ${personalInfo.location}
+GPA: 4.38/4.5 (Valedictorian and Honor Student)
 
 SKILLS:
 ${skillsList}
 
+TECHNICAL EXPERTISE:
+- Programming: ${chatbotKnowledge.technicalExpertise.programmingLanguages}
+- ML Frameworks: ${chatbotKnowledge.technicalExpertise.mlFrameworks}
+- NLP Tools: ${chatbotKnowledge.technicalExpertise.nlpTools}
+- Data Science: ${chatbotKnowledge.technicalExpertise.dataScience}
+- ML Models: ${chatbotKnowledge.technicalExpertise.mlModels}
+- Tools: ${chatbotKnowledge.technicalExpertise.tools}
+- Web Technologies: ${chatbotKnowledge.technicalExpertise.webTech}
+
+DOMAIN-SPECIFIC EXPERTISE (Use this to answer specific domain questions):
+${domainExpertiseText}
+
 PROJECTS:
 ${projectsList}
+
+NOTABLE PROJECT DETAILS:
+- Person Tracking: ${chatbotKnowledge.notableProjects.personTracking}
+- Call Volume Detection: ${chatbotKnowledge.notableProjects.callVolume}
+- Clickbait Detector: ${chatbotKnowledge.notableProjects.clickbaitDetector}
+- Earthquake Prediction: ${chatbotKnowledge.notableProjects.earthquakePrediction}
 
 RESEARCH & PUBLICATIONS:
 ${publicationsList}
@@ -282,13 +323,30 @@ ${publicationsList}
 EXPERIENCE & EDUCATION:
 ${experienceList}
 
-RESEARCH INTERESTS: ${chatbotKnowledge.researchInterests.join(', ')}
+RESEARCH INTERESTS:
+${chatbotKnowledge.researchInterests.join('\n- ')}
+
+RESEARCH FOCUS:
+${chatbotKnowledge.researchFocus}
+
+ACHIEVEMENTS:
+- ${achievementsList}
+
+COLLABORATION INTERESTS:
+${chatbotKnowledge.collaborationInterests}
+
+AVAILABILITY:
+${chatbotKnowledge.availability}
 
 When answering questions:
 - Be helpful and concise (2-3 sentences max)
-- Provide specific information from the portfolio
+- Provide specific, detailed information from the portfolio
+- For domain-specific questions (e.g., "frontend experience", "machine learning skills"), use the DOMAIN-SPECIFIC EXPERTISE section to provide comprehensive answers including relevant projects, skills, certifications, and experience
+- Connect related information across projects, skills, certifications, and experience
+- Highlight concrete examples and evidence
 - If asked about availability: ${chatbotKnowledge.availability}
-- If asked for contact: Direct them to email ${personalInfo.email} or use the contact form
+- If asked for contact: Direct them to email ${personalInfo.email}
+- If asked about collaborations: Mention research interests and collaboration opportunities
 - If you don't have specific information, say so and suggest asking ${personalInfo.name} directly`;
   };
 
