@@ -20,7 +20,7 @@ export const personalInfo = {
   },
 
   // Profile image (place in public folder)
-  image: "/profile.jpg",
+  image: "/portfolio/profile.jpg",
 };
 
 export const skills = {
@@ -236,7 +236,7 @@ export const awards = [
     issuer: "Humblebee AI",
     date: "2025",
     description: "First place winner in the AI hackathon competition.",
-    image: "/certifications/humblebee_ai_hackathon.jpg"
+    image: "/portfolio/certifications/humblebee_ai_hackathon.jpg"
   },
   {
     id: 2,
@@ -244,7 +244,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
-    image: "/certifications/inha_capstone.jpg"
+    image: "/portfolio/certifications/inha_capstone.jpg"
   },
   {
     id: 3,
@@ -252,7 +252,7 @@ export const awards = [
     issuer: "INHA University",
     date: "December 2025",
     description: "Second place in the capstone design competition.",
-    image: "/certifications/inha_capstone.jpg"
+    image: "/portfolio/certifications/inha_capstone.jpg"
   },
 
   {
