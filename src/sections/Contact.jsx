@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiMapPin } from 'react-icons/fi';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
 import { personalInfo } from '../data/portfolioData';
@@ -160,18 +160,6 @@ const Contact = () => {
             <InfoValue theme={theme}>
               <a href={`mailto:${personalInfo.email}`}>
                 {personalInfo.email}
-              </a>
-            </InfoValue>
-          </InfoCard>
-
-          <InfoCard theme={theme} variants={itemVariants}>
-            <IconWrapper theme={theme}>
-              <FiPhone />
-            </IconWrapper>
-            <InfoLabel theme={theme}>Phone</InfoLabel>
-            <InfoValue theme={theme}>
-              <a href={`tel:${personalInfo.phone}`}>
-                {personalInfo.phone}
               </a>
             </InfoValue>
           </InfoCard>

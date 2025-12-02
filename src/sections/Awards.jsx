@@ -43,38 +43,56 @@ const AwardsGrid = styled.div`
 
 const AwardCard = styled(motion.div)`
   background: ${props => props.theme.bg.card};
-  padding: 2rem;
   border-radius: ${props => props.theme.radius.xl};
   box-shadow: ${props => props.theme.shadow.medium};
   border: 1px solid ${props => props.theme.border.primary};
-  border-left: 4px solid ${props => props.theme.accent.primary};
   transition: all 0.3s ease;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: ${props => props.theme.shadow.large};
-    border-left-width: 6px;
+    border-color: ${props => props.theme.accent.primary};
+  }
+`;
+
+const AwardImage = styled.div`
+  width: 100%;
+  height: 200px;
+  background: ${props => props.theme.bg.secondary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
+    inset: 0;
     background: ${props => props.theme.accent.primary};
-    opacity: 0.03;
-    border-radius: 50%;
-    transition: all 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  &:hover::before {
-    top: -25%;
-    right: -25%;
+  ${AwardCard}:hover &::before {
+    opacity: 0.1;
   }
+`;
+
+const AwardContent = styled.div`
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 const AwardIcon = styled.div`
@@ -185,20 +203,29 @@ const Awards = () => {
               theme={theme}
               variants={itemVariants}
             >
-              <AwardIcon theme={theme}>
-                <FiAward />
-              </AwardIcon>
-              <AwardTitle theme={theme}>{award.title}</AwardTitle>
-              <AwardIssuer theme={theme}>
-                {award.issuer}
-              </AwardIssuer>
-              <AwardDate theme={theme}>
-                <FiCalendar />
-                {award.date}
-              </AwardDate>
-              <AwardDescription theme={theme}>
-                {award.description}
-              </AwardDescription>
+              {award.image && (
+                <AwardImage theme={theme}>
+                  <img src={award.image} alt={award.title} />
+                </AwardImage>
+              )}
+              <AwardContent>
+                {!award.image && (
+                  <AwardIcon theme={theme}>
+                    <FiAward />
+                  </AwardIcon>
+                )}
+                <AwardTitle theme={theme}>{award.title}</AwardTitle>
+                <AwardIssuer theme={theme}>
+                  {award.issuer}
+                </AwardIssuer>
+                <AwardDate theme={theme}>
+                  <FiCalendar />
+                  {award.date}
+                </AwardDate>
+                <AwardDescription theme={theme}>
+                  {award.description}
+                </AwardDescription>
+              </AwardContent>
             </AwardCard>
           ))}
         </AwardsGrid>

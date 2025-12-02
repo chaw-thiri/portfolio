@@ -1,7 +1,5 @@
 // Portfolio data for Chaw Thiri San
 
-import { image } from "framer-motion/client";
-
 export const personalInfo = {
   name: "Chaw Thiri San",
   title: "Student & AI Researcher",
@@ -22,7 +20,7 @@ export const personalInfo = {
   },
 
   // Profile image (place in public folder)
-  image: "public/profile.JPG",
+  image: "/profile.jpg",
 };
 
 export const skills = {
@@ -238,7 +236,7 @@ export const awards = [
     issuer: "Humblebee AI",
     date: "2025",
     description: "First place winner in the AI hackathon competition.",
-    image: "public/certifications/humblebee_ai_hackathon.jpg"
+    image: "/certifications/humblebee_ai_hackathon.jpg"
   },
   {
     id: 2,
@@ -246,7 +244,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
-    image: "public/certifications/inha_capstone.jpg"
+    image: "/certifications/inha_capstone.jpg"
   },
   {
     id: 3,
@@ -254,9 +252,9 @@ export const awards = [
     issuer: "INHA University",
     date: "December 2025",
     description: "Second place in the capstone design competition.",
-    image: "public/certifications/inha_capstone.jpg"
+    image: "/certifications/inha_capstone.jpg"
   },
-  
+
   {
     id: 4,
     title: "Global Scholarship 1 & 2 (100% tuition waiver)",

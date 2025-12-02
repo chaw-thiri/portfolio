@@ -61,27 +61,8 @@ const ProjectCard = styled(motion.div)`
   }
 `;
 
-const ProjectImage = styled.div`
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  position: relative;
-  background: ${props => props.theme.bg.secondary};
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  ${ProjectCard}:hover & img {
-    transform: scale(1.1);
-  }
-`;
-
 const ProjectContent = styled.div`
-  padding: 1.5rem;
+  padding: 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -157,19 +138,6 @@ const LinkButton = styled.a`
   }
 `;
 
-const FeaturedBadge = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background: ${props => props.theme.accent.primary};
-  color: white;
-  border-radius: ${props => props.theme.radius.full};
-  font-size: ${props => props.theme.fontSize.sm};
-  font-weight: 600;
-  z-index: 1;
-`;
-
 const Projects = () => {
   const { theme } = useTheme();
 
@@ -227,12 +195,6 @@ const Projects = () => {
               theme={theme}
               variants={itemVariants}
             >
-              <ProjectImage theme={theme}>
-                {project.featured && (
-                  <FeaturedBadge theme={theme}>Featured</FeaturedBadge>
-                )}
-                <img src={project.image} alt={project.title} />
-              </ProjectImage>
               <ProjectContent>
                 <ProjectTitle theme={theme}>{project.title}</ProjectTitle>
                 <ProjectDescription theme={theme}>
