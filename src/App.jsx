@@ -3,6 +3,7 @@ import { ThemeProvider } from './utils/ThemeContext';
 import { useTheme } from './utils/ThemeContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 import Hero from './sections/Hero';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
@@ -36,6 +37,7 @@ function AppContent() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </AppContainer>
   );
 }

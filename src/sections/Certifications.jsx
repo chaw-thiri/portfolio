@@ -243,16 +243,6 @@ const Certifications = () => {
               theme={theme}
               variants={itemVariants}
             >
-              <CertImage theme={theme}>
-                {cert.image ? (
-                  <img src={cert.image} alt={cert.title} />
-                ) : (
-                  <CertBadge theme={theme}>
-                    <FiAward />
-                  </CertBadge>
-                )}
-              </CertImage>
-
               <CertContent>
                 <CertTitle theme={theme}>{cert.title}</CertTitle>
                 <Issuer theme={theme}>{cert.issuer}</Issuer>
