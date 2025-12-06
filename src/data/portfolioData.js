@@ -21,7 +21,7 @@ export const personalInfo = {
   },
 
   // Profile image (place in public folder)
-  image: "public/profile.jpg",
+  image: "/profile.jpg",
 };
 
 export const skills = {
@@ -227,7 +227,7 @@ export const awards = [
     issuer: "Humblebee AI",
     date: "2025",
     description: "First place winner in the AI hackathon competition.",
-    image: "/portfolio/certifications/humblebee_ai_hackathon.jpg"
+    image: "/certifications/humblebee_ai_hackathon.jpg"
   },
   {
     id: 2,
@@ -235,7 +235,7 @@ export const awards = [
     issuer: "Seoul Global Startup Center",
     date: "November 2025",
     description: "Recognized for the most creative solution in the hackathon.",
-    image: "/portfolio/certifications/seoul_global_startup_center.jpg"
+    image: "/certifications/seoul_global_startup_hackthon.jpg"
   },
   {
     id: 3,
@@ -243,7 +243,7 @@ export const awards = [
     issuer: "INHA University",
     date: "December 2025",
     description: "Second place in the capstone design competition.",
-    image: "/portfolio/certifications/inha_capstone.jpg"
+    image: "/certifications/inha_capstone.jpg"
   },
 
   {
@@ -297,7 +297,7 @@ export const chatbotKnowledge = {
     "Valedictorian and Honor Student at INHA University",
     "Multiple professional certifications including Cisco DevNet Associate, CCNA, CyberOps Associate",
     "Machine Learning Specialization from DeepLearning.AI",
-    "OpenCV and TensorFlow Keras Bootcamp certifications"
+    "OpenCV Bootcamp certification"
   ],
   technicalExpertise: {
     programmingLanguages: "Python (primary), SQL, C++, React, Git",
@@ -343,7 +343,7 @@ export const chatbotKnowledge = {
         "Earthquake Prediction - CNN-based regression model with Grid Search optimization",
         "Clickbait Detector - Fine-tuned DistilBERT transformer model"
       ],
-      certifications: ["Machine Learning Specialization (DeepLearning.AI)", "TensorFlow Keras Bootcamp (OpenCV University)"],
+      certifications: ["Machine Learning Specialization (DeepLearning.AI)"],
       publications: "Applied ML techniques in 3 research papers (1 published, 2 under review)",
       experience: "2+ years hands-on ML experience with computer vision, NLP, and time-series prediction"
     },
