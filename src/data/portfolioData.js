@@ -175,7 +175,6 @@ export const certifications = [
     date: "2024",
     credentialId: "",
     link: "https://www.coursera.org/account/accomplishments/specialization/5KSQ5T5QRK2B",
-    image: "/certifications/ml-specialization.jpg",
     skills: ["Machine Learning", "Deep Learning", "Neural Networks"],
   },
   {
@@ -185,7 +184,6 @@ export const certifications = [
     date: "2024",
     credentialId: "903f50f3-38c3-4598-9f3a-fa2ed6d04d5c",
     link: "https://www.credly.com/badges/903f50f3-38c3-4598-9f3a-fa2ed6d04d5c/linked_in_profile",
-    image: "/certifications/devnet.jpg",
     skills: ["Network Automation", "APIs", "Python"],
   },
   {
@@ -195,7 +193,6 @@ export const certifications = [
     date: "2024",
     credentialId: "",
     link: "https://www.credly.com/badges/c8cd0341-834a-4714-8d93-24b6309311af/linked_in_profile",
-    image: "/certifications/ccna.jpg",
     skills: ["Networking", "Routing", "Switching"],
   },
   {
@@ -205,7 +202,6 @@ export const certifications = [
     date: "2024",
     credentialId: "",
     link: "https://www.credly.com/badges/5acc96de-6b98-44ad-b285-2cec03797ac6/linked_in_profile",
-    image: "/certifications/cyberops.jpg",
     skills: ["Cybersecurity", "Network Security", "Threat Detection"],
   },
   {
@@ -215,7 +211,6 @@ export const certifications = [
     date: "2024",
     credentialId: "a311db67d6ee4a9e8a571ca3af562a07",
     link: "https://courses.opencv.org/certificates/a311db67d6ee4a9e8a571ca3af562a07",
-    image: "/certifications/opencv.jpg",
     skills: ["OpenCV", "Computer Vision", "Image Processing"],
   },
 ];
