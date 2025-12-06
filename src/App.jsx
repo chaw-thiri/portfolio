@@ -27,12 +27,12 @@ function AppContent() {
       <Navigation />
       <main>
         <Hero />
+        <Awards />
         <Skills />
         <Projects />
         <Research />
         <Experience />
         <Certifications />
-        <Awards />
         <Contact />
       </main>
       <Footer />
