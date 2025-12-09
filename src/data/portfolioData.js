@@ -87,6 +87,15 @@ export const projects = [
     demo: "",
     featured: true,
   },
+  {
+    id: 5,
+    title: "FocusFlow Pomodoro App",
+    description: "A productivity app that uses the Pomodoro technique to help users manage their time effectively. Features include time tracking, and analytics to improve focus and productivity.",
+    technologies: ["React (Expo 54)", "Tailwind CSS", "Reanimated 3", "Moti", "Zustand", "Expo Router", "Bottom Sheet", "Lottie Animations"],
+    github: "https://github.com/chaw-thiri/FocusFlow",
+    demo: "",
+    featured: true,
+  },
 ];
 
 
