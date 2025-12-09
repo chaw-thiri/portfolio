@@ -93,7 +93,7 @@ export const projects = [
     description: "AI-powered tool for classifying news headlines using DistilBERT with high accuracy. Features real-time predictions through Streamlit app, integrates web scraping (Selenium, BeautifulSoup), News API, and interactive EDA visualizations.",
     technologies: ["DistilBERT", "PyTorch", "NLP", "Streamlit", "Selenium", "BeautifulSoup", "News API", "Plotly"],
     github: "https://github.com/chaw-thiri/clickbait_detection",
-    demo: "",
+    demo: "https://youtu.be/SHChMa8tb0M?si=umr0ZiVtysnFOClO",
     featured: true,
   },
   
