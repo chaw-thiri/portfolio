@@ -52,6 +52,15 @@ export const skills = {
 export const projects = [
   {
     id: 1,
+    title: "FocusFlow Pomodoro App",
+    description: "A productivity app that uses the Pomodoro technique to help users manage their time effectively. Features include time tracking, and analytics to improve focus and productivity.",
+    technologies: ["React (Expo 54)", "Tailwind CSS", "Reanimated 3", "Moti", "Zustand", "Expo Router", "Bottom Sheet", "Lottie Animations"],
+    github: "https://github.com/chaw-thiri/FocusFlow",
+    demo: "https://youtube.com/shorts/78tXIArpO6k?feature=share",
+    featured: true,
+  },
+  {
+    id: 2,
     title: "Unique Person Tracking and Counting",
     description: "Finetuned BOT-Sort model with yolo11n for person re-identification to ensure accurate unique person counting throughout video footage. Optimized for Raspberry Pi deployment to reduce computational workload while maintaining accuracy.",
     image: "/projects/person-tracking.jpg",
@@ -61,7 +70,7 @@ export const projects = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     title: "Call Volume Detection",
     description: "Winner of 1st prize at hackathon. Time-series prediction project on NYC 311 call center data implementing multiple tree-based ML models (XGBRegressor, LightGBM, CatBoost, Random Forest). Includes statistical anomaly detection and Power BI dashboard visualization.",
     technologies: ["Python", "XGBoost", "LightGBM", "CatBoost", "Power BI", "Statistical Analysis"],
@@ -70,7 +79,7 @@ export const projects = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "Earthquake Prediction Model",
     description: "CNN-based model to predict future earthquakes using historical seismic data. Utilizes Keras regressor with Adam optimizer and Grid Search to estimate earthquake magnitude and crack depth with high accuracy.",
     technologies: ["TensorFlow", "Keras", "CNNs", "Python", "Matplotlib", "Grid Search"],
@@ -79,7 +88,7 @@ export const projects = [
     featured: true,
   },
   {
-    id: 4,
+    id: 5,
     title: "Clickbait Detector",
     description: "AI-powered tool for classifying news headlines using DistilBERT with high accuracy. Features real-time predictions through Streamlit app, integrates web scraping (Selenium, BeautifulSoup), News API, and interactive EDA visualizations.",
     technologies: ["DistilBERT", "PyTorch", "NLP", "Streamlit", "Selenium", "BeautifulSoup", "News API", "Plotly"],
@@ -87,15 +96,7 @@ export const projects = [
     demo: "",
     featured: true,
   },
-  {
-    id: 5,
-    title: "FocusFlow Pomodoro App",
-    description: "A productivity app that uses the Pomodoro technique to help users manage their time effectively. Features include time tracking, and analytics to improve focus and productivity.",
-    technologies: ["React (Expo 54)", "Tailwind CSS", "Reanimated 3", "Moti", "Zustand", "Expo Router", "Bottom Sheet", "Lottie Animations"],
-    github: "https://github.com/chaw-thiri/FocusFlow",
-    demo: "/Users/chaw/Documents/portfolio_website/portfolio/src/assets/focusflow.mp4",
-    featured: true,
-  },
+  
 ];
 
 
