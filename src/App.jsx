@@ -7,6 +7,7 @@ import Hero from './sections/Hero';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Research from './sections/Research';
+import Blog from './sections/Blog';
 import Experience from './sections/Experience';
 import Certifications from './sections/Certifications';
 import Awards from './sections/Awards';
@@ -28,11 +29,12 @@ function AppContent() {
       <main>
         <Hero />
         <Awards />
-        <Skills />
-        <Projects />
         <Research />
+        <Blog />
+        <Projects />
         <Experience />
         <Certifications />
+        <Skills />
         <Contact />
       </main>
       <Footer />
