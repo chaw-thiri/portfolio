@@ -111,7 +111,7 @@ export const publications = [
     abstract: "Conducted an in-depth review on how 5IR technologies (AI, robotics, IoT, 5G, edge computing) are transforming weeding in agriculture. Highlighted sustainable, data-driven practices that reduce herbicide use and enhance crop yield. Proposed scalable solutions for global adoption, especially in low-resource settings.",
     link: "https://www.mdpi.com/2079-9292/14/13/2517",
     pdf: "https://www.mdpi.com/2079-9292/14/13/2517/pdf",
-    citations: 5,
+    citations: 11,
     year: 2025,
     tags: ["Agriculture", "AI", "Robotics", "IoT", "5G", "Sustainability"],
   },
