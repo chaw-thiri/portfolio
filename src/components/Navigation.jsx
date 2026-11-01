@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
+import { personalInfo } from '../data/portfolioData';
 import ThemeToggle from './ThemeToggle';
 
 const Nav = styled(motion.nav)`
@@ -29,12 +30,22 @@ const NavContainer = styled.div`
   align-items: center;
 `;
 
-const Logo = styled(motion.div)`
-  font-family: ${props => props.theme.fonts.heading};
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: ${props => props.theme.text.primary};
+const Logo = styled(motion.a)`
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid ${props => props.theme.border.primary};
+  overflow: hidden;
   cursor: pointer;
+`;
+
+const LogoImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 75%;
 `;
 
 const NavLinks = styled.div`
@@ -196,11 +207,16 @@ const Navigation = () => {
         <NavContainer>
           <Logo
             theme={theme}
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            href="#about"
+            aria-label={`${personalInfo.name}, back to top`}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToSection('#about');
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Portfolio
+            <LogoImage src={personalInfo.image} alt="" width={44} height={44} />
           </Logo>
 
           <NavLinks theme={theme}>

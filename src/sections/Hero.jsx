@@ -210,6 +210,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 75%;
   border-radius: 50%;
   background: ${props => props.theme.bg.secondary};
 `;
