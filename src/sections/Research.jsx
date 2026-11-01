@@ -18,10 +18,7 @@ const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
 `;
 
 const SectionSubtitle = styled(motion.p)`
@@ -96,7 +93,7 @@ const Venue = styled.div`
 `;
 
 const VenueText = styled.span`
-  color: ${props => props.theme.accent.primary};
+  color: ${props => props.theme.text.accent};
   font-weight: 600;
   font-size: ${props => props.theme.fontSize.sm};
 `;
@@ -139,8 +136,8 @@ const Tags = styled.div`
 
 const Tag = styled.span`
   padding: 0.25rem 0.75rem;
-  background: ${props => props.theme.accent.primary}22;
-  color: ${props => props.theme.accent.primaryDark};
+  background: ${props => props.theme.bg.secondary};
+  color: ${props => props.theme.text.secondary};
   border-radius: ${props => props.theme.radius.full};
   font-size: ${props => props.theme.fontSize.xs};
   font-weight: 500;
@@ -159,7 +156,7 @@ const ActionButton = styled.a`
     : 'transparent'
   };
   color: ${props => props.$primary
-    ? 'white'
+    ? props.theme.text.onAccent
     : props.theme.text.primary
   };
   border: 2px solid ${props => props.$primary
@@ -181,8 +178,8 @@ const ActionButton = styled.a`
       ? props.theme.accent.primaryDark
       : props.theme.accent.primary
     };
-    color: white;
-    border-color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.onAccent};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 

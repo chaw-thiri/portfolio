@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiMail, FiMapPin } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
 import { personalInfo } from '../data/portfolioData';
@@ -17,38 +17,20 @@ const Container = styled.div`
 const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
-  margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-`;
-
-const SectionSubtitle = styled(motion.p)`
-  text-align: center;
-  color: ${props => props.theme.text.secondary};
-  font-size: ${props => props.theme.fontSize.lg};
-  margin-bottom: 4rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 2rem;
+  color: ${props => props.theme.text.primary};
 `;
 
 const ContactInfo = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 560px;
   margin: 0 auto;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 const InfoCard = styled(motion.div)`
   background: ${props => props.theme.bg.card};
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
   border-radius: ${props => props.theme.radius.xl};
   box-shadow: ${props => props.theme.shadow.medium};
   border: 1px solid ${props => props.theme.border.primary};
@@ -61,7 +43,7 @@ const InfoCard = styled(motion.div)`
 
   &:hover {
     transform: translateY(-8px);
-    border-color: ${props => props.theme.accent.primary};
+    border-color: ${props => props.theme.text.accent};
     box-shadow: ${props => props.theme.shadow.large};
   }
 `;
@@ -70,11 +52,11 @@ const IconWrapper = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: ${props => props.theme.accent.primary};
+  background: ${props => props.theme.bg.tertiary};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${props => props.theme.text.secondary};
   font-size: 1.5rem;
 `;
 
@@ -91,9 +73,11 @@ const InfoValue = styled.div`
   font-size: ${props => props.theme.fontSize.lg};
   color: ${props => props.theme.text.primary};
   font-weight: 500;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 
   a {
-    color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.accent};
     transition: color 0.3s ease;
 
     &:hover {
@@ -134,17 +118,8 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Get In Touch
+          Get in Touch
         </SectionTitle>
-        <SectionSubtitle
-          theme={theme}
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Have a question or want to work together? Feel free to reach out!
-        </SectionSubtitle>
 
         <ContactInfo
           variants={containerVariants}
@@ -154,23 +129,13 @@ const Contact = () => {
         >
           <InfoCard theme={theme} variants={itemVariants}>
             <IconWrapper theme={theme}>
-              <FiMail />
+              <FiMail aria-hidden="true" />
             </IconWrapper>
             <InfoLabel theme={theme}>Email</InfoLabel>
             <InfoValue theme={theme}>
               <a href={`mailto:${personalInfo.email}`}>
                 {personalInfo.email}
               </a>
-            </InfoValue>
-          </InfoCard>
-
-          <InfoCard theme={theme} variants={itemVariants}>
-            <IconWrapper theme={theme}>
-              <FiMapPin />
-            </IconWrapper>
-            <InfoLabel theme={theme}>Location</InfoLabel>
-            <InfoValue theme={theme}>
-              {personalInfo.location}
             </InfoValue>
           </InfoCard>
         </ContactInfo>

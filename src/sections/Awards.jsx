@@ -18,7 +18,7 @@ const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  color: ${props => props.theme.accent.primary};
+  color: ${props => props.theme.text.primary};
 `;
 
 const SectionSubtitle = styled(motion.p)`
@@ -54,7 +54,7 @@ const AwardCard = styled(motion.div)`
   &:hover {
     transform: translateY(-5px);
     box-shadow: ${props => props.theme.shadow.large};
-    border-color: ${props => props.theme.accent.primary};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -99,11 +99,11 @@ const AwardIcon = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: ${props => props.theme.accent.primary};
+  background: ${props => props.theme.bg.tertiary};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${props => props.theme.text.secondary};
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: ${props => props.theme.shadow.accent};
@@ -136,7 +136,7 @@ const AwardDate = styled.div`
   margin-bottom: 1rem;
 
   svg {
-    color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -187,7 +187,7 @@ const Awards = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Recognition for academic excellence and achievements
+          Recognition for applied AI, creative problem solving, and technical projects
         </SectionSubtitle>
 
         <AwardsGrid

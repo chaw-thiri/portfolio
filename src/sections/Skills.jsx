@@ -18,10 +18,7 @@ const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
 `;
 
 const SectionSubtitle = styled(motion.p)`
@@ -36,7 +33,7 @@ const SectionSubtitle = styled(motion.p)`
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 2rem;
 `;
 
@@ -50,8 +47,8 @@ const SkillCategory = styled(motion.div)`
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: ${props => props.theme.shadow.gold};
-    border-color: ${props => props.theme.accent.primary};
+    box-shadow: ${props => props.theme.shadow.hover};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -60,8 +57,15 @@ const CategoryTitle = styled.h3`
   color: ${props => props.theme.text.primary};
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid ${props => props.theme.accent.primary};
+  border-bottom: 1px solid ${props => props.theme.border.primary};
   font-weight: 600;
+`;
+
+const CategoryDescription = styled.p`
+  color: ${props => props.theme.text.secondary};
+  font-size: ${props => props.theme.fontSize.sm};
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
 `;
 
 const SkillsList = styled.div`
@@ -82,9 +86,9 @@ const SkillTag = styled(motion.span)`
 
   &:hover {
     background: ${props => props.theme.accent.primary};
-    color: white;
+    color: ${props => props.theme.text.onAccent};
     transform: translateY(-2px);
-    border-color: ${props => props.theme.accent.primary};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -129,7 +133,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Technologies and tools I work with
+          Methods and tools used in the selected projects
         </SectionSubtitle>
 
         <SkillsGrid
@@ -137,7 +141,7 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           {skills.categories.map((category, index) => (
             <SkillCategory
@@ -148,6 +152,9 @@ const Skills = () => {
               <CategoryTitle theme={theme}>
                 {category.title}
               </CategoryTitle>
+              <CategoryDescription theme={theme}>
+                {category.description}
+              </CategoryDescription>
               <SkillsList>
                 {category.skills.map((skill, skillIndex) => (
                   <SkillTag

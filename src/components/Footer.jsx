@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiHeart, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
 import { personalInfo } from '../data/portfolioData';
@@ -38,7 +38,7 @@ const SocialLink = styled(motion.a)`
 
   &:hover {
     background: ${props => props.theme.accent.primary};
-    color: white;
+    color: ${props => props.theme.text.onAccent};
     transform: translateY(-3px);
   }
 `;
@@ -52,25 +52,6 @@ const Copyright = styled.div`
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
-
-  .heart {
-    color: ${props => props.theme.accent.secondary};
-    animation: heartbeat 1.5s ease-in-out infinite;
-  }
-
-  @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-  }
-`;
-
-const Link = styled.a`
-  color: ${props => props.theme.accent.primary};
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: ${props => props.theme.accent.secondary};
-  }
 `;
 
 const Footer = () => {
@@ -108,12 +89,6 @@ const Footer = () => {
         <Copyright theme={theme}>
           <span>© {currentYear}</span>
           <span>{personalInfo.name}.</span>
-          <span>Made with</span>
-          <FiHeart className="heart" />
-          <span>using</span>
-          <Link href="https://react.dev" target="_blank" rel="noopener noreferrer" theme={theme}>
-            React
-          </Link>
         </Copyright>
       </Container>
     </FooterContainer>

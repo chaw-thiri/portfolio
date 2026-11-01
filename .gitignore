@@ -12,6 +12,27 @@ dist
 dist-ssr
 *.local
 
+# Private resumes, recovered conversations, and document working files
+/resume-output.local/
+/resume-work.local/
+/claude-recovery.local/
+/design-preview.local/
+/resumes/
+/personal/
+/personal-information/
+/personal information/
+[Rr]esume*.docx
+[Rr]esume*.pdf
+[Cc][Vv].docx
+[Cc][Vv].pdf
+
+# Local credentials and assistant settings
+.env
+.env.*
+!.env.example
+.aws/
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

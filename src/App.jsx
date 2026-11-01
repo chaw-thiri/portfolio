@@ -8,7 +8,6 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Research from './sections/Research';
 import Blog from './sections/Blog';
-import Experience from './sections/Experience';
 import Certifications from './sections/Certifications';
 import Awards from './sections/Awards';
 import Contact from './sections/Contact';
@@ -32,7 +31,6 @@ function AppContent() {
         <Research />
         <Blog />
         <Projects />
-        <Experience />
         <Certifications />
         <Skills />
         <Contact />

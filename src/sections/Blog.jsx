@@ -18,10 +18,7 @@ const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
 `;
 
 const SectionSubtitle = styled(motion.p)`
@@ -58,7 +55,7 @@ const BlogCard = styled(motion.div)`
   &:hover {
     transform: translateY(-8px);
     box-shadow: ${props => props.theme.shadow.large};
-    border-color: ${props => props.theme.accent.primary};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -109,7 +106,7 @@ const BlogMeta = styled.div`
 const ReadMoreButton = styled.a`
   padding: 0.625rem 1.25rem;
   background: ${props => props.theme.accent.primary};
-  color: white;
+  color: ${props => props.theme.text.onAccent};
   border-radius: ${props => props.theme.radius.md};
   font-weight: 600;
   font-size: ${props => props.theme.fontSize.sm};
@@ -132,7 +129,7 @@ const ViewAllButton = styled.a`
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   background: ${props => props.theme.accent.primary};
-  color: white;
+  color: ${props => props.theme.text.onAccent};
   border-radius: ${props => props.theme.radius.md};
   font-weight: 600;
   font-size: ${props => props.theme.fontSize.base};

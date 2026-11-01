@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
-import { projects } from '../data/portfolioData';
+import { personalInfo, projects } from '../data/portfolioData';
 
 const ProjectsSection = styled.section`
   padding: 6rem 2rem;
@@ -18,17 +18,14 @@ const SectionTitle = styled(motion.h2)`
   font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
 `;
 
 const SectionSubtitle = styled(motion.p)`
   text-align: center;
   color: ${props => props.theme.text.secondary};
   font-size: ${props => props.theme.fontSize.lg};
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -36,7 +33,7 @@ const SectionSubtitle = styled(motion.p)`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2.5rem;
 
   @media (max-width: 480px) {
@@ -44,7 +41,7 @@ const ProjectsGrid = styled.div`
   }
 `;
 
-const ProjectCard = styled(motion.div)`
+const ProjectCard = styled(motion.article)`
   background: ${props => props.theme.bg.card};
   border-radius: ${props => props.theme.radius.xl};
   overflow: hidden;
@@ -57,15 +54,35 @@ const ProjectCard = styled(motion.div)`
   &:hover {
     transform: translateY(-8px);
     box-shadow: ${props => props.theme.shadow.large};
-    border-color: ${props => props.theme.accent.primary};
+    border-color: ${props => props.theme.text.accent};
   }
 `;
 
 const ProjectContent = styled.div`
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
   flex: 1;
   display: flex;
   flex-direction: column;
+`;
+
+const ProjectCategory = styled.p`
+  color: ${props => props.theme.text.tertiary};
+  font-size: ${props => props.theme.fontSize.xs};
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+`;
+
+const ProjectHighlight = styled.p`
+  align-self: flex-start;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: ${props => props.theme.radius.md};
+  background: ${props => props.theme.bg.secondary};
+  color: ${props => props.theme.text.secondary};
+  font-size: ${props => props.theme.fontSize.xs};
+  font-weight: 600;
 `;
 
 const ProjectTitle = styled.h3`
@@ -92,16 +109,24 @@ const Technologies = styled.div`
 const TechTag = styled.span`
   padding: 0.25rem 0.75rem;
   background: ${props => props.theme.bg.secondary};
-  color: ${props => props.theme.accent.primary};
+  color: ${props => props.theme.text.secondary};
   border-radius: ${props => props.theme.radius.full};
   font-size: ${props => props.theme.fontSize.sm};
   font-weight: 500;
-  border: 1px solid ${props => props.theme.accent.primary}33;
+  border: 1px solid ${props => props.theme.border.primary};
 `;
 
 const ProjectLinks = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin-top: auto;
+`;
+
+const MoreProjects = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 `;
 
 const LinkButton = styled.a`
@@ -111,7 +136,7 @@ const LinkButton = styled.a`
     : 'transparent'
   };
   color: ${props => props.$primary
-    ? 'white'
+    ? props.theme.text.onAccent
     : props.theme.text.primary
   };
   border: 2px solid ${props => props.$primary
@@ -133,30 +158,26 @@ const LinkButton = styled.a`
       ? props.theme.accent.primaryDark
       : props.theme.accent.primary
     };
-    color: white;
-    border-color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.onAccent};
+    border-color: ${props => props.theme.text.accent};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.text.accent};
+    outline-offset: 4px;
   }
 `;
 
 const Projects = () => {
   const { theme } = useTheme();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
+  const shouldReduceMotion = useReducedMotion();
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: shouldReduceMotion ? 0 : 0.4 },
     },
   };
 
@@ -170,7 +191,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Featured Projects
+          Selected Projects
         </SectionTitle>
         <SectionSubtitle
           theme={theme}
@@ -179,30 +200,34 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Some of my recent work and personal projects
+          Selected work in trustworthy AI, computer vision, and applied machine learning.
         </SectionSubtitle>
 
-        <ProjectsGrid
-          as={motion.div}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
+        <ProjectsGrid id="project-results">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
               theme={theme}
               variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              aria-labelledby={`project-title-${project.id}`}
             >
               <ProjectContent>
-                <ProjectTitle theme={theme}>{project.title}</ProjectTitle>
+                <ProjectCategory theme={theme}>{project.category}</ProjectCategory>
+                <ProjectTitle id={`project-title-${project.id}`} theme={theme}>
+                  {project.title}
+                </ProjectTitle>
+                {project.highlight && (
+                  <ProjectHighlight theme={theme}>{project.highlight}</ProjectHighlight>
+                )}
                 <ProjectDescription theme={theme}>
                   {project.description}
                 </ProjectDescription>
                 <Technologies>
-                  {project.technologies.map((tech, index) => (
-                    <TechTag key={index} theme={theme}>
+                  {project.technologies.map(tech => (
+                    <TechTag key={tech} theme={theme}>
                       {tech}
                     </TechTag>
                   ))}
@@ -213,9 +238,10 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`View ${project.title} on GitHub`}
                       theme={theme}
                     >
-                      <FiGithub /> Code
+                      <FiGithub aria-hidden="true" /> Code
                     </LinkButton>
                   )}
                   {project.demo && (
@@ -223,10 +249,11 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${project.demoLabel || 'Watch demo'}: ${project.title}`}
                       theme={theme}
                       $primary
                     >
-                      <FiExternalLink /> Demo
+                      <FiExternalLink aria-hidden="true" /> {project.demoLabel || 'Watch demo'}
                     </LinkButton>
                   )}
                 </ProjectLinks>
@@ -234,6 +261,16 @@ const Projects = () => {
             </ProjectCard>
           ))}
         </ProjectsGrid>
+        <MoreProjects>
+          <LinkButton
+            href={`${personalInfo.social.github}?tab=repositories`}
+            target="_blank"
+            rel="noopener noreferrer"
+            theme={theme}
+          >
+            <FiGithub aria-hidden="true" /> View all repositories
+          </LinkButton>
+        </MoreProjects>
       </Container>
     </ProjectsSection>
   );

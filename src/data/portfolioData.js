@@ -1,22 +1,19 @@
 // Portfolio data for Chaw Thiri San
 
-import { ImInstagram } from "react-icons/im";
-
 export const personalInfo = {
   name: "Chaw Thiri San",
-  title: "Student & AI Researcher",
-  tagline: "Passionate about NLP, Computer Vision, and Data Science",
+  title: "Open to research collaborations",
+  tagline: "My work spans natural language processing, computer vision, and trustworthy AI. Feel free to contact me to discuss research collaborations.",
   email: "chawthiri177@gmail.com",
   phone: "",
   location: "Incheon, Korea",
-  bio: "I am a Valedictorian and Honor Student at INHA University, pursuing a BS in Integrated Systems Engineering with a GPA of 4.38/4.5. I am passionate about leveraging cutting-edge technologies to solve real-world problems. My research interests span across NLP, computer vision, quantum cryptography, and data science.",
+  bio: "My research interests center on natural language processing, computer vision, and trustworthy AI. Through applied projects and published research, I explore how machine learning systems can be evaluated and used in practice. I welcome research collaborations and academic partnerships.",
 
   // Social links
   social: {
     github: "https://github.com/chaw-thiri",
     linkedin: "https://linkedin.com/in/chaw-thiri-san", 
     scholar: "https://scholar.google.com/citations?user=ngi2m7AAAAAJ&hl=en",
-    orcid: "https://orcid.org/0009-0004-4680-8483",
     medium: "https://medium.com/@chawthirisan"
   },
 
@@ -27,24 +24,19 @@ export const personalInfo = {
 export const skills = {
   categories: [
     {
-      title: "Programming & Development",
-      skills: ["Python", "SQL", "Git", "APIs", "C++" , "React"],
+      title: "Machine Learning & Evaluation",
+      description: "Comparing predictive models on time-series and wearable sensor data.",
+      skills: ["Python", "PyTorch", "TensorFlow", "scikit-learn", "Model comparison", "Error analysis"],
     },
     {
-      title: "Machine Learning & AI",
-      skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Keras", "Matplotlib", "Pandas", "NumPy"],
+      title: "NLP & LLM Security",
+      description: "Fine-tuning and evaluating headline classifiers and prompt-injection detectors.",
+      skills: ["DistilBERT", "Transformer fine-tuning", "Text classification", "Prompt-injection detection", "Threshold analysis", "Generalization testing"],
     },
     {
-      title: "NLP & Deep Learning",
-      skills: ["DistilBERT", "Transformers", "Natural Language Processing", "CNNs"],
-    },
-    {
-      title: "Tools & Technologies",
-      skills: ["Docker", "Raspberry Pi", "TurtleBot"],
-    },
-    {
-      title: "Web Scraping & APIs",
-      skills: ["Selenium", "BeautifulSoup", "News API", "RESTful APIs"],
+      title: "Computer Vision & Robotics",
+      description: "Detection, persistent identities, and perception integrated with robot control.",
+      skills: ["OpenCV", "YOLO", "BoT-SORT", "Person re-identification", "ROS 2", "TurtleBot3"],
     },
   ],
 };
@@ -52,54 +44,58 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    title: "FocusFlow Pomodoro App",
-    description: "A productivity app that uses the Pomodoro technique to help users manage their time effectively. Features include time tracking, and analytics to improve focus and productivity.",
-    technologies: ["React (Expo 54)", "Tailwind CSS", "Reanimated 3", "Moti", "Zustand", "Expo Router", "Bottom Sheet", "Lottie Animations"],
-    github: "https://github.com/chaw-thiri/FocusFlow",
-    demo: "https://youtube.com/shorts/78tXIArpO6k?feature=share",
-    featured: true,
+    title: "PromptShield · LLM Security Lab",
+    category: "AI & NLP",
+    highlight: "Research prototype",
+    description: "An experimental prompt-injection detector that fine-tunes DistilBERT to screen untrusted documents before they reach a local Llama model. Evaluates attack detection, benign false alarms, and useful task completion through reproducible studies, with documented limits in generalization.",
+    technologies: ["Python", "DistilBERT", "PyTorch", "Ollama", "Llama 3.2"],
+    github: "https://github.com/chaw-thiri/llm-security-lab",
+  },
+  {
+    id: 8,
+    title: "TENG Sensor · Rehabilitation Analysis",
+    category: "Data Science",
+    description: "Compares machine learning and neural network models on rehabilitation monitoring signals from wearable TENG nanosensors. Classifies participants and sensor locations using configurable signal windows, with confusion matrices to compare model behavior.",
+    technologies: ["Python", "scikit-learn", "TensorFlow", "Keras", "Pandas", "NumPy"],
+    github: "https://github.com/chaw-thiri/ai-teng-nano-sensor",
   },
   {
     id: 2,
-    title: "Unique Person Tracking and Counting",
-    description: "Finetuned BOT-Sort model with yolo11n for person re-identification to ensure accurate unique person counting throughout video footage. Optimized for Raspberry Pi deployment to reduce computational workload while maintaining accuracy.",
-    image: "/projects/person-tracking.jpg",
-    technologies: ["TensorFlow", "Docker", "Ultralytics", "Raspberry Pi", "TurtleBot", "YOLO11n", "BOT-Sort"],
-    github: "https://github.com/chaw-thiri/Unique-Person-Counter-using-Re-id-",
-    demo: "https://github.com/chaw-thiri/Unique-Person-Counter-using-Re-id-/blob/main/t_homeplus1.mp4",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "Call Volume Detection",
-    description: "Winner of 1st prize at hackathon. Time-series prediction project on NYC 311 call center data implementing multiple tree-based ML models (XGBRegressor, LightGBM, CatBoost, Random Forest). Includes statistical anomaly detection and Power BI dashboard visualization.",
-    technologies: ["Python", "XGBoost", "LightGBM", "CatBoost", "Power BI", "Statistical Analysis"],
-    github: "https://github.com/chaw-thiri/City-311-Insights-Challenge",
-    demo: "",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "Earthquake Prediction Model",
-    description: "CNN-based model to predict future earthquakes using historical seismic data. Utilizes Keras regressor with Adam optimizer and Grid Search to estimate earthquake magnitude and crack depth with high accuracy.",
-    technologies: ["TensorFlow", "Keras", "CNNs", "Python", "Matplotlib", "Grid Search"],
-    github: "https://github.com/chaw-thiri/earthquake_detection_-_crack_depth_estimation",
-    demo: "",
-    featured: true,
+    title: "Vision360 · Autonomous Robot Vision",
+    category: "Computer Vision",
+    description: "A vision and navigation system for TurtleBot3 that combines pedestrian detection, lane following, and traffic sign recognition. Integrates ROS 2 control, emergency stopping, and a browser interface for live camera monitoring and manual control.",
+    technologies: ["Python", "ROS 2", "YOLOv8", "OpenCV", "FastAPI", "TurtleBot3"],
+    github: "https://github.com/chaw-thiri/vision360",
   },
   {
     id: 5,
-    title: "Clickbait Detector",
-    description: "AI-powered tool for classifying news headlines using DistilBERT with high accuracy. Features real-time predictions through Streamlit app, integrates web scraping (Selenium, BeautifulSoup), News API, and interactive EDA visualizations.",
-    technologies: ["DistilBERT", "PyTorch", "NLP", "Streamlit", "Selenium", "BeautifulSoup", "News API", "Plotly"],
-    github: "https://github.com/chaw-thiri/clickbait_detection",
-    demo: "https://youtu.be/SHChMa8tb0M?si=umr0ZiVtysnFOClO",
-    featured: true,
+    title: "City 311 · Call Volume Forecasting",
+    category: "Data Science",
+    highlight: "1st place · Humblebee AI Hackathon",
+    description: "Analyzes NYC 311 service requests to forecast call volumes and reveal seasonal patterns. Compares tree-based regression models, investigates statistical anomalies, and presents service trends and data quality issues in a Power BI dashboard.",
+    technologies: ["Python", "XGBoost", "LightGBM", "CatBoost", "scikit-learn", "Power BI"],
+    github: "https://github.com/chaw-thiri/City-311-Insights-Challenge",
+    demo: "https://drive.google.com/file/d/14U43gzWZZ6PYs7vOT1VAhWfcVDHBRuI3/view",
   },
-  
+  {
+    id: 4,
+    title: "Unique Person Tracking and Counting",
+    category: "Computer Vision",
+    description: "Combines YOLO11n detection with BoT-SORT re-identification to maintain person IDs through occlusion and count unique visitors in video. Includes configurable frame skipping and annotated video exports with bounding boxes, persistent IDs, and count overlays.",
+    technologies: ["Python", "YOLO11n", "BoT-SORT", "Ultralytics", "OpenCV"],
+    github: "https://github.com/chaw-thiri/Unique-Person-Counter-using-Re-id-",
+    demo: "https://github.com/chaw-thiri/Unique-Person-Counter-using-Re-id-/blob/main/t_homeplus1.mp4",
+  },
+  {
+    id: 3,
+    title: "Clickbait Detector",
+    category: "AI & NLP",
+    description: "A headline classification pipeline built around a fine-tuned DistilBERT model. Combines news scraping and News API integration with a Streamlit app for confidence scores, label corrections, dataset updates, and interactive exploratory analysis.",
+    technologies: ["DistilBERT", "PyTorch", "Streamlit", "Selenium", "BeautifulSoup", "Plotly"],
+    github: "https://github.com/chaw-thiri/clickbait_detection",
+    demo: "https://youtu.be/SHChMa8tb0M",
+  },
 ];
-
-
 
 export const publications = [
   {
@@ -111,35 +107,9 @@ export const publications = [
     abstract: "Conducted an in-depth review on how 5IR technologies (AI, robotics, IoT, 5G, edge computing) are transforming weeding in agriculture. Highlighted sustainable, data-driven practices that reduce herbicide use and enhance crop yield. Proposed scalable solutions for global adoption, especially in low-resource settings.",
     link: "https://www.mdpi.com/2079-9292/14/13/2517",
     pdf: "https://www.mdpi.com/2079-9292/14/13/2517/pdf",
-    citations: 11,
+    citations: 15,
     year: 2025,
     tags: ["Agriculture", "AI", "Robotics", "IoT", "5G", "Sustainability"],
-  },
-  {
-    id: 2,
-    title: "Quantum Cryptography in Biometric Security: A Comprehensive Review of Algorithms and Integration Challenges",
-    authors: "Chaw Thiri San, Vijay Kakani",
-    venue: "Journal of Industrial Information Integration (Elsevier) - Under Review",
-    type: "Journal Article",
-    abstract: "Investigates quantum-resilient biometric security via post-quantum cryptography and quantum-native protocols (QKD, entanglement), analyzing vulnerabilities, security-performance trade-offs, and implementation challenges for practical quantum-secure authentication systems.",
-    link: "",
-    pdf: "",
-    citations: 0,
-    year: 2025,
-    tags: ["Quantum Cryptography", "Biometric Security", "Post-Quantum", "QKD", "Authentication"],
-  },
-  {
-    id: 3,
-    title: "Large Language Models and Eye-Tracking: Investigating Code Comprehension and Programmer Behaviors",
-    authors: "Chaw Thiri San",
-    venue: "Advanced Engineering Informatics (Elsevier) - Under Review",
-    type: "Journal Article",
-    abstract: "Conducts an in-depth review on limitations in LLMs' code understanding due to lack of cognitive grounding and explores how eye-tracking data can inform more human-centered, interpretable, and functionally accurate models while addressing trust and critical thinking in AI-generated code.",
-    link: "",
-    pdf: "",
-    citations: 0,
-    year: 2025,
-    tags: ["LLM", "Eye-Tracking", "Code Comprehension", "Human-AI Interaction"],
   },
 ];
 
@@ -187,42 +157,6 @@ export const certifications = [
     link: "https://www.coursera.org/account/accomplishments/specialization/5KSQ5T5QRK2B",
     skills: ["Machine Learning", "Deep Learning", "Neural Networks"],
   },
-  {
-    id: 2,
-    title: "DevNet Associate",
-    issuer: "Cisco",
-    date: "2024",
-    credentialId: "903f50f3-38c3-4598-9f3a-fa2ed6d04d5c",
-    link: "https://www.credly.com/badges/903f50f3-38c3-4598-9f3a-fa2ed6d04d5c/linked_in_profile",
-    skills: ["Network Automation", "APIs", "Python"],
-  },
-  {
-    id: 3,
-    title: "CCNA: Introduction to Networks",
-    issuer: "Cisco",
-    date: "2024",
-    credentialId: "",
-    link: "https://www.credly.com/badges/c8cd0341-834a-4714-8d93-24b6309311af/linked_in_profile",
-    skills: ["Networking", "Routing", "Switching"],
-  },
-  {
-    id: 4,
-    title: "CyberOps Associate",
-    issuer: "Cisco",
-    date: "2024",
-    credentialId: "",
-    link: "https://www.credly.com/badges/5acc96de-6b98-44ad-b285-2cec03797ac6/linked_in_profile",
-    skills: ["Cybersecurity", "Network Security", "Threat Detection"],
-  },
-  {
-    id: 5,
-    title: "OpenCV Bootcamp",
-    issuer: "OpenCV University",
-    date: "2024",
-    credentialId: "a311db67d6ee4a9e8a571ca3af562a07",
-    link: "https://courses.opencv.org/certificates/a311db67d6ee4a9e8a571ca3af562a07",
-    skills: ["OpenCV", "Computer Vision", "Image Processing"],
-  },
 ];
 
 export const awards = [
@@ -249,14 +183,6 @@ export const awards = [
     date: "December 2025",
     description: "Second place in the capstone design competition.",
     image: "/portfolio/certifications/inha_capstone.jpg"
-  },
-
-  {
-    id: 4,
-    title: "Global Scholarship 1 & 2 (100% tuition waiver)",
-    issuer: "INHA University",
-    date: "2022-2025",
-    description: "Continuing full tuition scholarship for maintaining GPA above 4.3.",
   },
 ];
 
@@ -294,7 +220,7 @@ export const chatbotKnowledge = {
   ],
   availability: "Currently pursuing Bachelor's degree in Integrated Systems Engineering at INHA University (expected graduation 2026). GPA: 4.38/4.5. Full tuition Global Scholarship recipient. Open to research collaborations, internship opportunities, and academic partnerships in AI/ML, computer vision, and quantum cryptography.",
   achievements: [
-    "Published first-author paper in MDPI Electronics journal (4 citations)",
+    "Published first-author paper in MDPI Electronics journal (15 citations)",
     "Two papers under review at Elsevier journals (Journal of Industrial Information Integration, Advanced Engineering Informatics)",
     "Winner of Humblebee AI's 2025 Hackathon (1st place)",
     "Most Creative Award at Seoul Global Startup Center Hackathon",
@@ -400,7 +326,7 @@ export const chatbotKnowledge = {
     },
     research: {
       publications: [
-        "Smart Precision Weeding in Agriculture Using 5IR Technologies (MDPI Electronics, 2025) - 4 citations",
+        "Smart Precision Weeding in Agriculture Using 5IR Technologies (MDPI Electronics, 2025) - 15 citations",
         "Quantum Cryptography in Biometric Security (Elsevier JIII - Under Review)",
         "Large Language Models and Eye-Tracking (Elsevier AEI - Under Review)"
       ],

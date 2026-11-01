@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiExternalLink } from 'react-icons/fi';
-import { SiGooglescholar, SiOrcid } from 'react-icons/si';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiExternalLink, FiBookOpen } from 'react-icons/fi';
+import { SiGooglescholar } from 'react-icons/si';
 import styled from 'styled-components';
 import { useTheme } from '../utils/ThemeContext';
 import { personalInfo } from '../data/portfolioData';
@@ -21,7 +21,7 @@ const HeroSection = styled.section`
     right: -20%;
     width: 600px;
     height: 600px;
-    background: ${props => props.theme.accent.primary};
+    background: ${props => props.theme.bg.tertiary};
     opacity: 0.03;
     border-radius: 50%;
     filter: blur(100px);
@@ -34,7 +34,7 @@ const HeroSection = styled.section`
     left: -20%;
     width: 600px;
     height: 600px;
-    background: ${props => props.theme.accent.secondary};
+    background: ${props => props.theme.bg.tertiary};
     opacity: 0.03;
     border-radius: 50%;
     filter: blur(100px);
@@ -75,10 +75,7 @@ const Greeting = styled(motion.p)`
 const Name = styled(motion.h1)`
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
 `;
 
 const Title = styled(motion.h2)`
@@ -126,9 +123,9 @@ const SocialLink = styled(motion.a)`
 
   &:hover {
     background: ${props => props.theme.accent.primary};
-    color: white;
+    color: ${props => props.theme.text.onAccent};
     transform: translateY(-3px);
-    box-shadow: ${props => props.theme.shadow.gold};
+    box-shadow: ${props => props.theme.shadow.hover};
   }
 `;
 
@@ -155,7 +152,7 @@ const Button = styled(motion.button)`
 
   &.primary {
     background: ${props => props.theme.accent.primary};
-    color: white;
+    color: ${props => props.theme.text.onAccent};
     border: none;
 
     &:hover {
@@ -171,7 +168,7 @@ const Button = styled(motion.button)`
 
     &:hover {
       background: ${props => props.theme.accent.primary};
-      color: white;
+      color: ${props => props.theme.text.onAccent};
       transform: translateY(-2px);
     }
   }
@@ -195,7 +192,7 @@ const ImageWrapper = styled.div`
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid transparent;
-  background: ${props => props.theme.accent.primary};
+  background: ${props => props.theme.border.primary};
   padding: 4px;
 
   @media (max-width: 768px) {
@@ -222,7 +219,7 @@ const ImageDecor = styled(motion.div)`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px dashed ${props => props.theme.accent.primary};
+  border: 2px dashed ${props => props.theme.border.primary};
   opacity: 0.3;
 `;
 
@@ -254,7 +251,7 @@ const Hero = () => {
     linkedin: <FiLinkedin />,
     twitter: <FiTwitter />,
     scholar: <SiGooglescholar />,
-    orcid: <SiOrcid />,
+    medium: <FiBookOpen />,
     website: <FiExternalLink />,
   };
 
@@ -268,7 +265,7 @@ const Hero = () => {
           animate="visible"
         >
           <Greeting theme={theme} variants={itemVariants}>
-            Hello, I'm
+            Research portfolio
           </Greeting>
           <Name theme={theme} variants={itemVariants}>
             {personalInfo.name}

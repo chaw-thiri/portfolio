@@ -1,92 +1,96 @@
 export const lightTheme = {
   // Background colors
   bg: {
-    primary: '#FFFFFF',
-    secondary: '#FAF9F8',
-    tertiary: '#F5F3F1',
+    primary: '#F8FAFC',
+    secondary: '#F1F5F9',
+    tertiary: '#E2E8F0',
     card: '#FFFFFF',
-    hover: '#FBF9F7',
+    hover: '#EEF2F6',
+    accent: '#EFF6FF',
   },
 
   // Text colors
   text: {
-    primary: '#1A1A1A',
-    secondary: '#4A4A4A',
-    tertiary: '#6B6B6B',
-    accent: '#390517',
-    light: '#8A8A8A',
+    primary: '#0F172A',
+    secondary: '#475569',
+    tertiary: '#52637A',
+    accent: '#1D4ED8',
+    light: '#52637A',
+    onAccent: '#FFFFFF',
   },
 
-  // Accent colors - elegant burgundy and champagne gold
+  // Blue is reserved for actions and selected states; slate supports neutral details.
   accent: {
-    primary: '#390517', // Deep burgundy
-    secondary: '#C9A961', // Champagne gold
-    primaryLight: '#5A0824',
-    primaryDark: '#220310',
-    secondaryLight: '#D4B976',
-    secondaryDark: '#A88B4D',
+    primary: '#1D4ED8',
+    secondary: '#475569',
+    primaryLight: '#2563EB',
+    primaryDark: '#1E40AF',
+    secondaryLight: '#64748B',
+    secondaryDark: '#334155',
   },
 
   // Border and divider colors
   border: {
-    primary: '#E8E5E2',
-    secondary: '#F2F0ED',
-    accent: '#390517',
+    primary: '#CBD5E1',
+    secondary: '#E2E8F0',
+    accent: '#1D4ED8',
   },
 
   // Shadow
   shadow: {
-    small: '0 1px 3px rgba(57, 5, 23, 0.08)',
-    medium: '0 4px 12px rgba(57, 5, 23, 0.12)',
-    large: '0 10px 40px rgba(57, 5, 23, 0.15)',
-    accent: '0 4px 20px rgba(57, 5, 23, 0.2)',
-    hover: '0 8px 30px rgba(57, 5, 23, 0.18)',
+    small: '0 1px 3px rgba(15, 23, 42, 0.04)',
+    medium: '0 4px 12px rgba(15, 23, 42, 0.06)',
+    large: '0 10px 30px rgba(15, 23, 42, 0.10)',
+    accent: '0 4px 16px rgba(15, 23, 42, 0.08)',
+    hover: '0 8px 24px rgba(15, 23, 42, 0.08)',
   },
 };
 
 export const darkTheme = {
   // Background colors
   bg: {
-    primary: '#0A0A0A',
-    secondary: '#1A1A1A',
-    tertiary: '#2A2A2A',
-    card: '#141414',
-    hover: '#1F1F1F',
+    primary: '#0F172A',
+    secondary: '#111C30',
+    tertiary: '#25334B',
+    card: '#182338',
+    hover: '#21314B',
+    accent: '#172E50',
   },
 
   // Text colors
   text: {
-    primary: '#F5F5F5',
-    secondary: '#D1D1D1',
-    tertiary: '#A3A3A3',
-    accent: '#E8A5B8',
-    light: '#8A8A8A',
+    primary: '#F1F5F9',
+    secondary: '#CBD5E1',
+    tertiary: '#94A3B8',
+    accent: '#93C5FD',
+    light: '#94A3B8',
+    onAccent: '#FFFFFF',
   },
 
-  // Accent colors - elegant rose and gold for dark mode
+  // Keep button fills deep blue and use a lighter blue for readable links.
   accent: {
-    primary: '#C4667D', // Rose
-    secondary: '#E5C78F', // Light gold
-    primaryLight: '#D48599',
-    primaryDark: '#A34D64',
-    secondaryLight: '#EDD7A8',
-    secondaryDark: '#CCB076',
+    primary: '#1D4ED8',
+    secondary: '#94A3B8',
+    primaryLight: '#60A5FA',
+    primaryDark: '#1E40AF',
+    secondaryLight: '#CBD5E1',
+    secondaryDark: '#64748B',
   },
 
   // Border and divider colors
   border: {
-    primary: '#2A2A2A',
-    secondary: '#3A3A3A',
-    accent: '#C4667D',
+    primary: '#334155',
+    secondary: '#25334B',
+    accent: '#93C5FD',
   },
 
   // Shadow
   shadow: {
-    small: '0 1px 3px rgba(0, 0, 0, 0.4)',
-    medium: '0 4px 12px rgba(0, 0, 0, 0.5)',
-    large: '0 10px 40px rgba(0, 0, 0, 0.6)',
-    accent: '0 4px 20px rgba(196, 102, 125, 0.25)',
-    hover: '0 8px 30px rgba(0, 0, 0, 0.5)',
+    small: '0 1px 3px rgba(0, 0, 0, 0.15)',
+    medium: '0 4px 12px rgba(0, 0, 0, 0.20)',
+    large: '0 10px 30px rgba(0, 0, 0, 0.30)',
+    accent: '0 4px 16px rgba(0, 0, 0, 0.20)',
+    hover: '0 8px 24px rgba(0, 0, 0, 0.25)',
   },
 };
 

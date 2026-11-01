@@ -33,10 +33,7 @@ const Logo = styled(motion.div)`
   font-family: ${props => props.theme.fonts.heading};
   font-size: 1.5rem;
   font-weight: 700;
-  background: ${props => props.theme.accent.primary};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: ${props => props.theme.text.primary};
   cursor: pointer;
 `;
 
@@ -71,7 +68,7 @@ const NavLink = styled(motion.a)`
   }
 
   &:hover {
-    color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.accent};
 
     &::after {
       transform: scaleX(1);
@@ -136,7 +133,7 @@ const MobileNavLink = styled(motion.a)`
   border-bottom: 1px solid ${props => props.theme.border.secondary};
 
   &:hover {
-    color: ${props => props.theme.accent.primary};
+    color: ${props => props.theme.text.accent};
   }
 `;
 
@@ -154,12 +151,12 @@ const CloseButton = styled(motion.button)`
 
 const navItems = [
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Research', href: '#research' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Certifications', href: '#certifications' },
   { label: 'Awards', href: '#awards' },
+  { label: 'Research', href: '#research' },
+  { label: 'Blog', href: '#blog' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Training', href: '#certifications' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -182,6 +179,7 @@ const Navigation = () => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(href);
       setMobileMenuOpen(false);
     }
   };
@@ -210,7 +208,11 @@ const Navigation = () => {
               <NavLink
                 key={item.label}
                 theme={theme}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection(item.href);
+                }}
                 whileHover={{ y: -2 }}
                 className={activeSection === item.href ? 'active' : ''}
               >
@@ -259,7 +261,11 @@ const Navigation = () => {
                   <MobileNavLink
                     key={item.label}
                     theme={theme}
-                    onClick={() => scrollToSection(item.href)}
+                    href={item.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      scrollToSection(item.href);
+                    }}
                     initial={{ x: 50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
